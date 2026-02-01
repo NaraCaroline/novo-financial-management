@@ -11,4 +11,3 @@ public class Ms1UserApplication {
 	}
 
 }
- 

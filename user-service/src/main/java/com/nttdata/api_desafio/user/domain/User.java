@@ -1,6 +1,7 @@
 package com.nttdata.api_desafio.user.domain;
 
 import com.nttdata.api_desafio.user.dto.UserDto;
+import com.nttdata.api_desafio.user.dto.UserUpdateDto;
 import jakarta.persistence.*;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -64,5 +65,14 @@ public class User implements UserDetails {
 
     public void encodePassword(PasswordEncoder passwordEncoder) {
         this.password = passwordEncoder.encode(this.password);
+    }
+
+    public void updateInfo(UserUpdateDto data) {
+        if (data.username() != null) {
+            this.username = data.username();
+        }
+        if (data.password() != null) {
+            this.password = data.password();
+        }
     }
 }
