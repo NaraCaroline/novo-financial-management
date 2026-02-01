@@ -27,11 +27,6 @@ public class ErrorHandler {
         return ResponseEntity.status(401).body("Falha na autenticação");
     }
 
-    @ExceptionHandler(AccessDeniedException.class)
-    public ResponseEntity handleErrorAccessDenied() {
-        return ResponseEntity.status(403).body("Acesso negado");
-    }
-
     private record ValidationErrorData(String field, String message) {
         public ValidationErrorData(FieldError error) {
             this(error.getField(), error.getDefaultMessage());
