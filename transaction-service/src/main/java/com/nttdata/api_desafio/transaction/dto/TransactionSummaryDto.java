@@ -1,7 +1,7 @@
 package com.nttdata.api_desafio.transaction.dto;
 
 import com.nttdata.api_desafio.transaction.domain.Transaction;
-import com.nttdata.api_desafio.transaction.enums.TransactionType;
+import com.nttdata.api_desafio.transaction.enums.TransactionStatus;
 
 import java.math.BigDecimal;
 
@@ -9,7 +9,7 @@ public record TransactionSummaryDto(
         Long id,
         String description,
         BigDecimal amount,
-        TransactionType type,
+        TransactionStatus status,
         String category,
         String username
 ) {
@@ -18,7 +18,7 @@ public record TransactionSummaryDto(
                 transaction.getId(),
                 transaction.getDescription(),
                 transaction.getAmount(),
-                transaction.getType(),
+                transaction.getStatus(),
                 transaction.getCategory(),
                 transaction.getUsername()
         );

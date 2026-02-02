@@ -1,6 +1,6 @@
 package com.nttdata.api_desafio.transaction.dto;
 
-import com.nttdata.api_desafio.transaction.enums.TransactionType;
+import com.nttdata.api_desafio.transaction.enums.TransactionStatus;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
@@ -11,7 +11,6 @@ public record TransactionDto(
         String description,
         @NotNull
         BigDecimal amount,
-        @NotNull
-        TransactionType type,
+        TransactionStatus status,
         @NotBlank
         String category) {}

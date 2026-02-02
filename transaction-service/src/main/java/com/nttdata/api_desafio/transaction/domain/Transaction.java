@@ -1,8 +1,8 @@
 package com.nttdata.api_desafio.transaction.domain;
 
+import com.nttdata.api_desafio.transaction.enums.TransactionStatus;
 import com.nttdata.api_desafio.transaction.dto.TransactionDto;
 import com.nttdata.api_desafio.transaction.dto.TransactionUpdateDto;
-import com.nttdata.api_desafio.transaction.enums.TransactionType;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -16,7 +16,7 @@ public class Transaction {
     private String description;
     private BigDecimal amount;
     @Enumerated(EnumType.STRING)
-    private TransactionType type;
+    private TransactionStatus status;
     private String category;
     private String username;
 
@@ -25,9 +25,9 @@ public class Transaction {
     public Transaction(TransactionDto data, String username) {
         this.description = data.description();
         this.amount = data.amount();
-        this.type = data.type();
         this.category = data.category();
         this.username = username;
+        this.status = TransactionStatus.PENDING;
     }
 
     public Long getId() {
@@ -50,13 +50,6 @@ public class Transaction {
     public void setAmount(BigDecimal amount) {
         this.amount = amount;}
 
-    public TransactionType getType() {
-        return type;
-    }
-    public void setType(TransactionType type) {
-        this.type = type;
-    }
-
     public String getCategory() {
         return category;
     }
@@ -71,6 +64,9 @@ public class Transaction {
         this.username = username;
     }
 
+    public TransactionStatus getStatus() {return status;}
+    public void setStatus(TransactionStatus status) {this.status = status;}
+
     public void updateInfo(TransactionUpdateDto data) {
         if (data.description() != null) {
             this.description = data.description();
@@ -78,8 +74,8 @@ public class Transaction {
         if (data.amount() != null) {
             this.amount = data.amount();
         }
-        if (data.type() != null) {
-            this.type = data.type();
+        if (data.status() != null) {
+            this.status = data.status();
         }
         if (data.category() != null) {
             this.category = data.category();
