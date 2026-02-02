@@ -12,7 +12,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.annotation.AuthenticationPrincipal;
+//import org.springframework.security.core.annotation.AuthenticationPrincipal;
 //import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -63,18 +63,26 @@ UserController {
         }
     }
 
-    @PutMapping("/me")
+    @PutMapping("/{id}")
     @Transactional
-    public ResponseEntity update(@RequestBody @Valid UserUpdateDto data, @AuthenticationPrincipal User currentUser) {
-        currentUser.updateInfo(data);
-        repository.save(currentUser);
-        return ResponseEntity.ok(new UserSummaryDto(currentUser));
+    public ResponseEntity update(@PathVariable Long id, @RequestBody @Valid UserUpdateDto data) {
+    //public ResponseEntity update(@RequestBody @Valid UserUpdateDto data, @AuthenticationPrincipal User currentUser) {
+//        currentUser.updateInfo(data);
+//        repository.save(currentUser);
+//        return ResponseEntity.ok(new UserSummaryDto(currentUser));
+        var user = repository.getReferenceById(id);
+        user.updateInfo(data);
+        repository.save(user);
+        return ResponseEntity.ok(new UserSummaryDto(user));
     }
 
-    @DeleteMapping("/me")
+    @DeleteMapping("/{id}")
     @Transactional
-    public ResponseEntity delete(@AuthenticationPrincipal User currentUser) {
-        repository.delete(currentUser);
+    public ResponseEntity delete(@PathVariable Long id) {
+    //public ResponseEntity delete(@AuthenticationPrincipal User currentUser) {
+//        repository.delete(currentUser);
+        var user = repository.getReferenceById(id);
+        repository.delete(user);
         return ResponseEntity.ok("Usuário deletado com sucesso.");
     }
 }
