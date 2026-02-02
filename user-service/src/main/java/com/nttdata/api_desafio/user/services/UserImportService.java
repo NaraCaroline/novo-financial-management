@@ -5,7 +5,7 @@ import com.nttdata.api_desafio.user.repositories.UserRepository;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,8 +20,8 @@ public class UserImportService {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     public void importUsers(MultipartFile file) throws Exception {
         List<User> users = new ArrayList<>();
@@ -42,7 +42,7 @@ public class UserImportService {
                 String password = currentRow.getCell(1).getStringCellValue();
 
                 user.setUsername(username);
-                user.setPassword(passwordEncoder.encode(password));
+//                user.setPassword(passwordEncoder.encode(password));
 
                 users.add(user);
             }

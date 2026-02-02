@@ -13,7 +13,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.security.crypto.password.PasswordEncoder;
+//import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -35,8 +35,8 @@ UserController {
     @Autowired
     private UserRepository repository;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+//    @Autowired
+//    private PasswordEncoder passwordEncoder;
 
     @Autowired
     private UserImportService userImportService;
@@ -44,8 +44,9 @@ UserController {
     @PostMapping
     @Transactional
     public ResponseEntity register(@RequestBody @Valid UserDto data, UriComponentsBuilder uriBuilder) {
+//    public ResponseEntity register(@RequestBody @Valid UserDto data, UriComponentsBuilder uriBuilder) {
         var user = new User(data);
-        user.encodePassword(passwordEncoder);
+        //user.encodePassword(passwordEncoder);
         repository.save(user);
         return ResponseEntity.status(201).build();
     }

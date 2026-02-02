@@ -63,9 +63,9 @@ public class User implements UserDetails {
         this.password = data.password();
     }
 
-    public void encodePassword(PasswordEncoder passwordEncoder) {
-        this.password = passwordEncoder.encode(this.password);
-    }
+//    public void encodePassword(PasswordEncoder passwordEncoder) {
+//        this.password = passwordEncoder.encode(this.password);
+//    }
 
     public void updateInfo(UserUpdateDto data) {
         if (data.username() != null) {
