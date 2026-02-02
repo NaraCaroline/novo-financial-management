@@ -22,7 +22,7 @@ public class TransactionController {
     private TransactionRepository repository;
 
     @Autowired
-    private KafkaTemplate<Object, Long> kafkaTemplate;
+    private KafkaTemplate<String, Long> kafkaTemplate;
 
     @PostMapping
     @Transactional
@@ -30,6 +30,7 @@ public class TransactionController {
         var transaction = new Transaction(data, username);
         repository.save(transaction);
         kafkaTemplate.send("transaction-topic", transaction.getId());
+
         return ResponseEntity.status(201).body(new TransactionSummaryDto(transaction));
     }
 
