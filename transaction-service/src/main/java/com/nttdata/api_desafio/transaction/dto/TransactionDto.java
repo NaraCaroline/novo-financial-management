@@ -7,6 +7,8 @@ import jakarta.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 public record TransactionDto(
+        @NotNull
+        Long id,
         @NotBlank
         String description,
         @NotNull

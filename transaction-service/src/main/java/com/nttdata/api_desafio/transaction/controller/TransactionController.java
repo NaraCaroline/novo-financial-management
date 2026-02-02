@@ -9,6 +9,7 @@ import jakarta.persistence.EntityNotFoundException;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,11 +21,15 @@ public class TransactionController {
     @Autowired
     private TransactionRepository repository;
 
+    @Autowired
+    private KafkaTemplate<Object, Long> kafkaTemplate;
+
     @PostMapping
     @Transactional
     public ResponseEntity<TransactionSummaryDto> create(@RequestBody @Valid TransactionDto data, @RequestParam String username) {
         var transaction = new Transaction(data, username);
         repository.save(transaction);
+        kafkaTemplate.send("transaction-topic", transaction.getId());
         return ResponseEntity.status(201).body(new TransactionSummaryDto(transaction));
     }
 
