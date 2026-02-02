@@ -1,0 +1,15 @@
+com\nttdata\api_desafio\transaction\infra\security\UserClient.class
+enums\Status.class
+com\nttdata\api_desafio\transaction\infra\exceptions\ErrorHandler.class
+com\nttdata\api_desafio\transaction\dto\TransactionUpdateDto.class
+enums\Bank.class
+com\nttdata\api_desafio\transaction\controller\TransactionController.class
+com\nttdata\api_desafio\transaction\dto\TransactionDto.class
+com\nttdata\api_desafio\transaction\domain\Transaction.class
+com\nttdata\api_desafio\transaction\TransactionApplication.class
+enums\TransactionType.class
+com\nttdata\api_desafio\transaction\infra\exceptions\ErrorHandler$ValidationErrorData.class
+enums\Currency.class
+com\nttdata\api_desafio\transaction\services\ReportService.class
+com\nttdata\api_desafio\transaction\repositories\TransactionRepository.class
+com\nttdata\api_desafio\transaction\dto\TransactionSummaryDto.class

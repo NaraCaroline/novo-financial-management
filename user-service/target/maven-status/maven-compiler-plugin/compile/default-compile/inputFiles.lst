@@ -1,0 +1,15 @@
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\adapters\controller\AuthController.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\adapters\controller\UserController.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\domain\User.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\dto\TokenJwtDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\dto\UserDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\dto\UserSummaryDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\dto\UserUpdateDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\infra\exceptions\ErrorHandler.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\infra\security\SecurityConfig.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\infra\security\SecurityFilter.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\infra\security\TokenService.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\Ms1UserApplication.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\repositories\UserRepository.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\services\AuthService.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\user-service\src\main\java\com\nttdata\api_desafio\user\services\UserImportService.java

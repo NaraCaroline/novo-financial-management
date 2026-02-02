@@ -1,0 +1,14 @@
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\controller\TransactionController.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\domain\Transaction.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\dto\TransactionDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\dto\TransactionSummaryDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\dto\TransactionUpdateDto.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\infra\exceptions\ErrorHandler.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\infra\security\UserClient.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\repositories\TransactionRepository.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\services\ReportService.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\com\nttdata\api_desafio\transaction\TransactionApplication.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\enums\Bank.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\enums\Currency.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\enums\Status.java
+D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\src\main\java\enums\TransactionType.java

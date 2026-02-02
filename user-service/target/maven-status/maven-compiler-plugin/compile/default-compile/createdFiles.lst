@@ -1,0 +1,16 @@
+com\nttdata\api_desafio\user\dto\TokenJwtDto.class
+com\nttdata\api_desafio\user\infra\exceptions\ErrorHandler$ValidationErrorData.class
+com\nttdata\api_desafio\user\infra\security\SecurityConfig.class
+com\nttdata\api_desafio\user\Ms1UserApplication.class
+com\nttdata\api_desafio\user\dto\UserDto.class
+com\nttdata\api_desafio\user\services\AuthService.class
+com\nttdata\api_desafio\user\dto\UserSummaryDto.class
+com\nttdata\api_desafio\user\dto\UserUpdateDto.class
+com\nttdata\api_desafio\user\domain\User.class
+com\nttdata\api_desafio\user\repositories\UserRepository.class
+com\nttdata\api_desafio\user\services\UserImportService.class
+com\nttdata\api_desafio\user\infra\exceptions\ErrorHandler.class
+com\nttdata\api_desafio\user\infra\security\SecurityFilter.class
+com\nttdata\api_desafio\user\infra\security\TokenService.class
+com\nttdata\api_desafio\user\adapters\controller\UserController.class
+com\nttdata\api_desafio\user\adapters\controller\AuthController.class

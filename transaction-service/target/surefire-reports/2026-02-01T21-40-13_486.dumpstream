@@ -1,0 +1,5 @@
+# Created at 2026-02-01T21:40:13.715
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Nara\Downloads\0PastasDesktop\Code\novo-financial-management\transaction-service\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

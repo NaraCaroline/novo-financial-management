@@ -17,7 +17,7 @@ public class TokenService {
         try {
             var algorithm = Algorithm.HMAC256(secret);
             return JWT.create()
-                    .withIssuer("Usuário API Gestão Financeira")
+                    .withIssuer("API Gestão Financeira")
                     .withSubject(user.getUsername())
                     .sign(algorithm);
         } catch (JWTCreationException exception) {
@@ -29,7 +29,7 @@ public class TokenService {
         try {
             var algorithm = Algorithm.HMAC256(secret);
             return JWT.require(algorithm)
-                    .withIssuer("Usuário API Gestão Financeira")
+                    .withIssuer("API Gestão Financeira")
                     .build()
                     .verify(tokenJWT)
                     .getSubject();
